@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peça quatro números. Informe se todos são iguais, se há apenas dois iguais, se há três iguais ou se todos são diferentes.</title>
+</head>
+<body>
+    
+    <h1>Analise de Igualdade</h1>
+    <div>
+        <h3>Insira 4 números para analise: </h3>
+    <p>Numero 1:<input type="number" id="num1" name="num1"></p>
+    <p>Numero 2:<input type="number" id="num2" name="num2"></p>
+    <p>Numero 3:<input type="number" id="num3" name="num3"></p>
+    <p>Numero 4:<input type="number" id="num4" name="num4"></p>
+    </div>
+    <input type="button" value="Analisar" id="jogar">
+   <Div>
+        <h2 id="res">
+
+        </h2>
+   </Div>
+
+   <script>
+    //variaveis do botao + listerner de função
+    let botaoAnalise = document.querySelector("input#jogar")
+    botaoAnalise.addEventListener("click",calcular)
+
+    //constantes de cada numero
+    const num1 = document.getElementById("num1")
+    const num2 = document.getElementById("num2")
+    const num3 = document.getElementById("num3")
+    const num4 = document.getElementById("num4")
+    
+    const res = document.getElementById("res")
+
+
+    function calcular(){
+        let val1 = Number(num1.value)
+        let val2 = Number(num2.value)
+        let val3 = Number(num3.value)
+        let val4 = Number(num4.value)
+
+        res.innerHTML = `<p>Números digitados foram: ${val1}, ${val2}, ${val3}, ${val4}<p>`;
+
+        if(val1 == val2 && val1 == val3 && val1 == val4){
+            res.innerHTML += `<p>Todos os números são iguais<P>`
+        }
+        else if(
+          (val1 == val2 && val1 == val3) ||
+          (val1 == val3 && val1 == val4) ||
+          (val2 == val3 && val2 == val4) ||
+          (val1 == val2 && val1 == val4)
+        ){
+            res.innerHTML += `<P>Três dos quatro números presentes são iguais<p>`
+        }
+        
+        else if( 
+               (val1 == val2) || (val1 == val3) || 
+               (val1 == val4)  || (val2 == val3) ||
+               (val2 == val4) || (val3 == val4)
+        ){
+            res.innerHTML += `<p>Apenas Dois números são iguais<p>` 
+            
+        }
+        
+        
+        else{
+            res.innerHTML += `<p>Não funcionou!<p>`
+        }
+           
+
+            
+        
+        
+       
+    }
+
+
+
+
+   </script>
+
+
+
+</body>
+</html>

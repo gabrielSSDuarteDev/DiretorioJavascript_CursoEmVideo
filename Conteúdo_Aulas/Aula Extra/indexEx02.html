@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+        <h1>Calculando Números</h1>
+        <Div>
+            <input type="number" id="num1" alt="txtn1">
+            <input type="number" id="num2" alt="txtn2">
+        </Div>
+
+        <Div>
+            <input type="button" value="Soma" id="somador">
+            <input type="button" value="Subtrair" id="retirador">
+            <input type="button" value="Multiplicar" id="multiplicador">
+            <input type="button" value="Dividir" id="Divisor">
+        </Div>
+
+        <div>
+            <p id="op">A operação selecionada Foi:   </p>
+            <h2 id="res">O Resultado da operação é:   </h2>
+        </div>
+
+
+    <script>
+        
+        const soma = document.getElementById("somador")
+        const menos = document.getElementById("retirador")
+        const multiplicação = document.getElementById("multiplicador")
+        const divisão = document.getElementById("Divisor")
+
+        soma.addEventListener("click",somar)
+        menos.addEventListener("click",subtrair)
+        multiplicação.addEventListener("click",multiplicar)
+        divisão.addEventListener("click",dividir)
+        
+
+        function somar(){
+            const num1 = document.querySelector("input#num1")
+            const num2 = document.querySelector("input#num2")
+            let val1 = Number(num1.value)
+            let val2 = Number(num2.value)
+            let res = document.querySelector("h2#res")
+            let op = document.getElementById("op")
+            let som = val1 + val2 
+            op.innerHTML = 'A operação selecionada foi: Soma'
+            res.innerText =  `O resultado da Operação é igual a: ${som}`
+           
+        }
+
+
+        function subtrair(){
+            const num1 = document.querySelector("input#num1")
+            const num2 = document.querySelector("input#num2")
+            let val1 = Number(num1.value)
+            let val2 = Number(num2.value)
+            let res = document.querySelector("h2#res")
+            let op = document.getElementById("op")
+            let som = val1 - val2 
+            op.innerHTML = 'A operação selecionada foi: subtração'
+            res.innerText =  `O resultado da Operação é igual a: ${som}`
+           
+        }
+
+
+
+        function multiplicar(){
+            const num1 = document.querySelector("input#num1")
+            const num2 = document.querySelector("input#num2")
+            let val1 = Number(num1.value)
+            let val2 = Number(num2.value)
+            let res = document.querySelector("h2#res")
+            let op = document.getElementById("op")
+            let som = val1 * val2 
+            op.innerHTML = 'A operação selecionada foi: multiplicação'
+            res.innerText =  `O resultado da Operação é igual a: ${som}`
+           
+        }
+
+
+
+
+
+
+        function dividir(){
+            const num1 = document.querySelector("input#num1")
+            const num2 = document.querySelector("input#num2")
+            let val1 = Number(num1.value)
+            let val2 = Number(num2.value)
+            let res = document.querySelector("h2#res")
+            let op = document.getElementById("op")
+            let som = val1 / val2 
+            op.innerHTML = 'A operação selecionada foi: Divisão'
+            res.innerText =  `O resultado da Operação é igual a: ${som}`
+           
+        }
+
+    </script>
+
+
+</body>
+</html>

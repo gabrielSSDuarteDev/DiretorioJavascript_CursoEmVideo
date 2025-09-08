@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aterar Imagem</title>
+
+    <style>
+        div{
+
+            
+            font:normal 20pt arial;
+            background: rgb(231, 5, 42);
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }  
+        img{
+             width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Alterar Imagem</h1>
+
+    <div id = "lugar" onclick="trocar()">
+        <img  id="legal" src="imagemMuitoLegal.jpg" alt=" Imagem muito legal">
+    </div>
+   
+<script>
+        function trocar(){
+            let outraImg = document.getElementById("lugar")
+            outraImg.style.display = 'none'
+        }
+
+       
+</script>
+
+
+
+    
+</body>
+</html>

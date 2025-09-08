@@ -1,0 +1,120 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* A clean, modern font */
+    background-color: #e0e5ec; /* Very light, soft gray-blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #4a667e; /* Soft dark blue for text */
+}
+
+h1 {
+    color: #34495e; /* A slightly darker blue for the heading */
+    margin-bottom: 35px;
+    font-weight: 600; /* Slightly bolder */
+}
+
+/* Ensure your HTML inputs and buttons are wrapped in this div for optimal layout */
+.calculator-controls {
+    background-color: #e0e5ec; /* Matches body background for a seamless look */
+    padding: 30px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 7px 7px 15px rgba(174, 174, 192, 0.4), /* Soft outer shadow */
+                -7px -7px 15px rgba(255, 255, 255, 0.9); /* Soft inner highlight */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Increased space between elements */
+    max-width: 400px; /* Limit width for a more contained look */
+}
+
+input[type="number"] {
+    width: 150px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px; /* Rounded input fields */
+    font-size: 1.1em;
+    background-color: #e0e5ec; /* Matches background */
+    color: #4a667e;
+    text-align: center;
+    outline: none;
+    box-shadow: inset 5px 5px 10px rgba(174, 174, 192, 0.3), /* Inset shadow for "pressed in" look */
+                inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+}
+
+input[type="number"]::placeholder {
+    color: #aeb9c9;
+}
+
+input[type="number"]:focus {
+    box-shadow: inset 3px 3px 7px rgba(174, 174, 192, 0.2), /* Softer focus shadow */
+                inset -3px -3px 7px rgba(255, 255, 255, 0.5);
+}
+
+input[type="button"] {
+    background-color: #e0e5ec; /* Matches background */
+    color: #5c7b94; /* Slightly brighter blue for text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 10px rgba(174, 174, 192, 0.4), /* Outset shadow for "raised" look */
+                -5px -5px 10px rgba(255, 255, 255, 0.9);
+}
+
+input[type="button"]:hover {
+    box-shadow: 3px 3px 7px rgba(174, 174, 192, 0.3), /* Softer hover shadow */
+                -3px -3px 7px rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px); /* Slight lift */
+    color: #3498db; /* Blue on hover */
+}
+
+input[type="button"]:active {
+    box-shadow: inset 3px 3px 7px rgba(174, 174, 192, 0.2), /* Inset shadow for "pressed" effect */
+                inset -3px -3px 7px rgba(255, 255, 255, 0.5);
+    transform: translateY(0);
+}
+
+#res {
+    margin-top: 40px;
+    padding: 20px 35px;
+    background-color: #ecf0f1; /* A slightly lighter background for the result */
+    border-radius: 18px;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #2c3e50; /* Darker text for clear result */
+    min-width: 280px;
+    text-align: center;
+    box-shadow: 7px 7px 15px rgba(174, 174, 192, 0.4),
+                -7px -7px 15px rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .calculator-controls {
+        flex-direction: column;
+        width: 90%;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    input[type="number"],
+    input[type="button"] {
+        width: 100%;
+        margin: 0; /* Remove individual margins as gap handles spacing */
+    }
+
+    #res {
+        min-width: unset;
+        width: 90%;
+        font-size: 1.4em;
+        padding: 18px 25px;
+    }
+}

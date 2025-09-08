@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A partir de duas notas e a média da turma, diga se o aluno está acima, abaixo ou na média.</title>
+</head>
+<body>
+    <h1>Média de notas</h1>
+    <p>Insira a primeira Nota do Aluno: <input type="number" id="nota1" name="nota1"></p>
+    <p>Insira a segunda Nota do Aluno: <input type="number" id="nota2" name="nota2"></p>
+    <input type="button" value="Calcular" id="mediaBotao" >
+    <div>
+        <h2 id="res"> </h2>
+    </div>
+    
+
+    <script >
+        let calcular = document.querySelector("input#mediaBotao")
+        calcular.addEventListener("click",mostrar)
+        const nota1 = document.getElementById("nota1")
+        const nota2 = document.querySelector("input#nota2")
+        const res = document.getElementById("res")
+        
+        function mostrar(){
+            let val1 = Number(nota1.value)
+            let val2 = Number(nota2.value)
+            let media = (val1 + val2) / 2
+
+            res.innerHTML = `<p>A média do Aluno é: ${media}</P>`
+
+            if(media < 5) {
+                res.innerHTML += "<p>O aluno está Abaixo da média</p>"
+
+            }else if(media >= 5 && media < 6){
+                res.innerHTML += '<p>O aluno está bem na Média</p>'
+            }else if(media > 6){
+                res.innerHTML += '<p>O aluno está acima da Média</p>'
+            }
+        }
+        
+     
+       
+     
+
+       
+
+
+        
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

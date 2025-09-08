@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconhecimento de Imigrante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Qual a sua nacionalidade?</h1>
+   <p> Digite a Sua nacionalidade:<input type="text" id="nal" name="nal"></p>
+    <input type="button" value="Verificar" id="analisar">
+    <div>
+        <h2 id="res"></h2>
+    </div>
+
+    <script>
+        let nalUsuario = document.getElementById("nal")
+        let res = document.getElementById("res")
+        let analisar = document.getElementById("analisar")
+        let navio = nalUsuario.value.trim()
+        analisar.addEventListener("click",reconhecer)
+       
+
+
+
+        function reconhecer(){
+         let navio = nalUsuario.value.trim()
+        let nacionalidadeMinuscula = navio.toLowerCase()
+            if(nacionalidadeMinuscula !== 'brasileiro' && nacionalidadeMinuscula !== 'brasileira'){
+               res.innerHTML ="Você é estrangeiro"
+            } 
+            else{
+                res.innerHTML="Você é Brasileiro"
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

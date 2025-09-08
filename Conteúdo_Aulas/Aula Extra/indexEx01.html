@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar a cor do Texto ao clicar</title>
+
+    <style>
+        div{
+            font:normal 20pt arial;
+            background: rgb(231, 5, 42);
+            color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }   
+    </style>
+</head>
+<body>
+    <h1>Mudança de Texto</h1>
+    <div id="bolinha" onclick="mudar()">
+        Texto!
+    </div>
+
+    <script>
+        function mudar(){
+            let mesa = document.getElementById('bolinha')
+            mesa.style.color = 'white'
+
+        }
+        let lin = document.getElementById('bolinha')
+        lin.addEventListener('mouseenter',entrou)
+        lin.addEventListener('mouseout',saiu)
+
+
+        function entrou(){
+            lin.style.background = 'blue'
+
+            function apertou(){
+                lin.style.background = 'black'
+                lin.innerText = 'Consegui'
+            }
+
+        }
+        function saiu(){
+            lin.style.background = 'red'
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

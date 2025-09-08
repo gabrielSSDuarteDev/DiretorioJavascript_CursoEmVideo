@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos DOM</title>
+
+    <style>
+        body{
+            background: rgb(242, 1, 41);
+            color: rgb(0, 0, 0);
+            font: normal 18pt arial;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <h1>Iniciando estudos com Dom</h1>
+    <p id="mensagem">Aqui vai o resultado</p>
+    <p>Estou aprendendoa usar o Dom</p>
+    <div>Clique em Mim </div>
+
+
+    <script>
+    window.document.writeln("Bem vindo ao DOM!")
+    let sel = window.document.getElementsById("p")[1]
+    window.document.write(`Está é uma mensagem feita por seletor: "${sel.innerText}"`)
+    sel.style.color = 'purple'
+    sel.innerHTML = 'O que isso faz?'
+    </script>
+</body>
+</html>
