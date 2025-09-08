@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro Exercício</title>
 
-
-
     <style>
         body{
 
             background-color: black;
             color: aliceblue;
             font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 20%;    
         
-
         }
     </style>
 </head>
 <body>
     <h1>Olá Mundo!!</h1>
-    <p>Eu nunca vou me render</p>
-
-
-
-
+    <p>Começando os estudos de javascript</p>
 
     <script> 
         window.alert("Alerta de Primeira mensagem");//alerta em javascript 
-        window.confirm("Está tudo bem!!");//Confirmação em javascript
+        window.confirm("Pode me confirmar uma coisa?");//Confirmação em javascript
         let confirm = window.prompt('Você está pronto?');// Variavel confirm utilizando uma janela de prompt 
-       
-       
-
-    </script>
+        let mensagemParaUsuario = window.prompt('Digite uma mensagem para o usuário: ');//Variavel mensagemParaUsuario utilizando uma janela de prompt
+        document.write(mensagemParaUsuario);//escreve na tela o que foi digitado na janela de prompt    
+</script>
 </body>
 </html>
