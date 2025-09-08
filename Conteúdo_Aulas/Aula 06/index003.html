@@ -8,13 +8,13 @@
 
 
     <style>
-        body{
+          body{
 
-            background-color: rgb(255, 0, 0);
+            background-color: black;
             color: aliceblue;
             font-family: 'Times New Roman', Times, serif;
-        
-
+            text-align: center;
+            margin-top: 20%;
         }
     </style>
 </head>
@@ -25,12 +25,12 @@
 
 
 
-    <script> 
+    <script> //usando script para fazer a soma de dois números
     let num1 = prompt("Digite um número");
     let num2 = prompt("Digite outro número")
-    s = parseFloat(num1) + parseFloat(num2)
-    alert(`O resultado da Soma do primeiro com o segundo número é ${s }`)
-
+    res = parseFloat(num1) + parseFloat(num2)
+    alert(`O resultado da Soma do primeiro com o segundo número é ${res}`)
+    document.write(`O primeiro número digitado foi ${num1} e o segundo número digitado foi ${num2}. A soma dos dois números é ${res}`);
     </script>
 </body>
 </html>
